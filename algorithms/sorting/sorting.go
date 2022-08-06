@@ -1,21 +1,6 @@
-package main
-
-import (
-	"fmt"
-	"math/rand"
-)
+package sorting
 
 type List []int
-
-func main() {
-	rand.Seed(1)
-	list := List(rand.Perm(10))
-
-	fmt.Println("Selection Sort")
-	fmt.Printf("Before sort: \t%v\n", list)
-	list.SelectionSort()
-	fmt.Printf("After sort: \t%v\n", list)
-}
 
 func (elements *List) SelectionSort() {
 	min := 0
@@ -30,4 +15,3 @@ func (elements *List) SelectionSort() {
 		(*elements)[i], (*elements)[min] = (*elements)[min], (*elements)[i]
 	}
 }
-
